@@ -2,7 +2,7 @@ import { ClapperboardIcon, Home, Search, Tv } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const MobileNavigation = () => {
-  const mobileNavigation = [
+  const mobileNav = [
     { id: 1, label: "Home", href: "/", icons: <Home /> },
     { id: 2, label: "TV Series", href: "tv", icons: <Tv /> },
     { id: 3, label: "Movies", href: "movie", icons: <ClapperboardIcon /> },
@@ -12,7 +12,7 @@ const MobileNavigation = () => {
   return (
     <div className="lg:hidden h-16 fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-2xl z-40">
       <div className="flex items-center justify-around h-full">
-        {mobileNavigation.map((el) => (
+        {mobileNav.map((el) => (
           <NavLink
             to={el.href}
             key={el.id}
